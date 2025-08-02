@@ -14,10 +14,10 @@
 */
 void test_validate_my_username()
 {
-    const char *expected = my_username();  // hardcoded username
-    char *actual = malloc_username_from_conf_file();  // read from conf/username.txt
+    const char *expected = my_username();  // your hardcoded username
+    char *actual = malloc_username_from_conf_file();  // from conf/username.txt
 
-    TEST_ASSERT_EQUAL_STRING_MESSAGE(expected, actual, "Username in config does not match hardcoded username");
+    TEST_ASSERT_EQUAL_STRING_MESSAGE(expected, actual, "Username does not match config file");
 
-    free(actual);  // Avoid memory leak
+    free(actual);  // Free memory to avoid leak
 }
